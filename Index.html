@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GerabahKita.com</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://kit.fontawesome.com/a2d9d6a54b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+  <div class="logo">
+    GerabahKita<span>.com</span>
+  </div>
+
+  <nav>
+  <a href="#beranda">Beranda</a>
+  <a href="#produk">Produk</a>
+  <a href="#ekspor">Ekspor</a>
+  <a href="#dashboard">Dashboard</a>
+  <a href="#kontak">Kontak</a>
+</nav>
+
+  <div class="nav-right">
+
+    <select id="currency">
+      <option>IDR</option>
+      <option>USD</option>
+      <option>EUR</option>
+    </select>
+
+    <select id="language">
+      <option>Indonesia</option>
+      <option>English</option>
+      <option>日本語</option>
+    </select>
+
+    <button id="toggle-mode">🌙</button>
+
+  </div>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="beranda">
+
+  <div class="overlay"></div>
+
+  <div class="hero-content">
+
+    <h1>
+      Keindahan Gerabah Indonesia Mendunia
+    </h1>
+
+    <p>
+      Marketplace gerabah tanah liat premium untuk pasar lokal
+      dan internasional.
+    </p>
+
+    <button>Lihat Produk</button>
+
+  </div>
+
+</section>
+
+<!-- STATS -->
+
+<section class="stats">
+
+  <div class="stat-card">
+    <h2>15K+</h2>
+    <p>Produk Terjual</p>
+  </div>
+
+  <div class="stat-card">
+    <h2>23</h2>
+    <p>Negara Ekspor</p>
+  </div>
+
+  <div class="stat-card">
+    <h2>120+</h2>
+    <p>Pengrajin Aktif</p>
+  </div>
+
+  <div class="stat-card">
+    <h2>4.9</h2>
+    <p>Rating</p>
+  </div>
+
+</section>
+
+<!-- PRODUCTS -->
+
+<section class="products" id="produk">
+
+  <div class="section-title">
+    <h2>Produk Unggulan</h2>
+  </div>
+
+  <div class="product-grid">
+
+    <div class="product-card">
+
+      <img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="product-info">
+
+        <h3>Vas Premium</h3>
+
+        <p class="price">Rp 350.000</p>
+
+        <p id="stock">Stok : 20</p>
+
+        <button onclick="buyProduct()">
+          Beli Sekarang
+        </button>
+
+      </div>
+
+    </div>
+
+    <div class="product-card">
+
+      <img src="https://images.unsplash.com/photo-1517705008128-361805f42e86?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="product-info">
+
+        <h3>Teko Artisan</h3>
+
+        <p class="price">Rp 420.000</p>
+
+        <button>Beli Sekarang</button>
+
+      </div>
+
+    </div>
+
+    <div class="product-card">
+
+      <img src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="product-info">
+
+        <h3>Pot Tradisional</h3>
+
+        <p class="price">Rp 280.000</p>
+
+        <button>Beli Sekarang</button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- DASHBOARD -->
+
+<section class="dashboard" id="dashboard">
+
+  <div class="section-title">
+    <h2>Dashboard Pengelola</h2>
+  </div>
+
+  <div class="dashboard-grid">
+
+    <div class="dashboard-card">
+      <h3>$124K</h3>
+      <p>Total Export</p>
+    </div>
+
+    <div class="dashboard-card">
+      <h3>245</h3>
+      <p>Pesanan Hari Ini</p>
+    </div>
+
+    <div class="dashboard-card">
+      <h3>18</h3>
+      <p>Negara Aktif</p>
+    </div>
+
+    <div class="dashboard-card">
+      <h3>15</h3>
+      <p>Admin Online</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- TRACKING -->
+
+<section class="tracking-section">
+
+  <div class="section-title">
+    <h2>Tracking Export</h2>
+  </div>
+
+  <div class="tracking">
+
+    <div class="step active">
+      Packing
+    </div>
+
+    <div class="step active">
+      Shipping
+    </div>
+
+    <div class="step">
+      Delivered
+    </div>
+
+  </div>
+
+</section>
+
+<!-- AI RECOMMENDATION -->
+
+<section class="recommendation">
+
+  <div class="section-title">
+    <h2>AI Recommendation</h2>
+  </div>
+
+  <div id="recommendation-box">
+
+  </div>
+
+</section>
+
+<!-- MULTI ADMIN -->
+
+<section class="admins">
+
+  <div class="section-title">
+    <h2>Multi Admin</h2>
+  </div>
+
+  <div class="admin-grid">
+
+    <div class="admin-card">
+      <h3>Super Admin</h3>
+    </div>
+
+    <div class="admin-card">
+      <h3>Finance</h3>
+    </div>
+
+    <div class="admin-card">
+      <h3>Customer Service</h3>
+    </div>
+
+    <div class="admin-card">
+      <h3>Pengrajin</h3>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- MARKETPLACE -->
+
+<section class="marketplace">
+
+  <div class="section-title">
+    <h2>Marketplace Integration</h2>
+  </div>
+
+  <div class="marketplace-grid">
+
+    <div class="market">Shopee</div>
+    <div class="market">Tokopedia</div>
+    <div class="market">Alibaba</div>
+    <div class="market">Amazon</div>
+    <div class="market">Etsy</div>
+
+  </div>
+
+</section>
+
+<!-- CMS -->
+
+<section class="cms">
+
+  <div class="section-title">
+    <h2>CMS Produk</h2>
+  </div>
+
+  <form class="cms-form">
+
+    <input type="text" placeholder="Nama Produk">
+
+    <textarea placeholder="Deskripsi Produk"></textarea>
+
+    <input type="file">
+
+    <button type="submit">
+      Upload Produk
+    </button>
+
+  </form>
+
+</section>
+
+<!-- RESELLER -->
+
+<section class="reseller">
+
+  <h2>Gabung Menjadi Mitra Pengrajin</h2>
+
+  <button>Daftar Sekarang</button>
+
+</section>
+
+<!-- LIVE CHAT -->
+
+<div class="live-chat">
+  💬 Live Chat Buyer
+</div>
+
+<!-- WHATSAPP -->
+
+<a href="#" class="whatsapp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- FOOTER -->
+
+<footer id="kontak">
+
+  <h2>GerabahKita.com</h2>
+
+  <p>
+    Marketplace Gerabah Indonesia untuk Dunia
+  </p>
+
+</footer>
+
+<!-- MITRA PENGERAJIN -->
+ <!-- MITRA PENGRAJIN -->
+
+<section class="mitra-pengrajin" id="mitra">
+
+  <div class="mitra-container">
+
+    <div class="mitra-left">
+
+      <h2>
+        Menjadi Mitra Pengrajin
+      </h2>
+
+      <p>
+        Bergabung bersama GerabahKita.com dan jual
+        karya gerabah terbaik Anda ke pasar lokal
+        maupun internasional.
+      </p>
+
+      <div class="benefit-list">
+
+        <div class="benefit">
+          🌍 Akses Pasar Internasional
+        </div>
+
+        <div class="benefit">
+          💰 Komisi Penjualan Tinggi
+        </div>
+
+        <div class="benefit">
+          📦 Bantuan Export & Pengiriman
+        </div>
+
+        <div class="benefit">
+          🤝 Dukungan Tim Profesional
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="mitra-right">
+
+      <form class="mitra-form">
+
+        <input type="text"
+        placeholder="Nama Pengrajin">
+
+        <input type="text"
+        placeholder="Nama Usaha">
+
+        <input type="text"
+        placeholder="Kota / Daerah">
+
+        <input type="tel"
+        placeholder="Nomor WhatsApp">
+
+        <input type="email"
+        placeholder="Email">
+
+        <textarea
+        placeholder="Ceritakan usaha gerabah Anda">
+        </textarea>
+
+        <button type="submit">
+          Daftar Menjadi Mitra
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
